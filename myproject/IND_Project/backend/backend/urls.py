@@ -22,12 +22,15 @@ from leetcodeproblems.views import ProblemView
 from rest_framework import routers 
 from signup.views import signupaction
 from signin.views import signinaction
+from django.views.generic import TemplateView
 route = routers.DefaultRouter()
 route.register("", ProblemView, basename="problemview")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('signup/',signupaction),
     path('signin/',signinaction),
     path('api/', include(route.urls)),
+    path('', TemplateView.as_view(template_name='index.html')),
 ]

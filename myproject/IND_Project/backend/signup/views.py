@@ -27,5 +27,6 @@ def signupaction(request):
         c="insert into users Values('{}','{}','{}','{}','{}')".format(fn,ln,s,em,pwd)
         cursor.execute(c)
         m.commit()
+        
 
     return render(request,'signup_page.html')

@@ -25,15 +25,15 @@ function TodoList() {
     //for listing items
   const [Items, setItems] = useState([]);
 
-  const fetchProducts = async () => {
+  const fetchItems = async () => {
     const result = await axios.get("http://127.0.0.1:8000/api/");
     console.log(result.data);
     setItems(result.data);
   };
 
-  useEffect((event) => {
-    event.preventDefault();
-    fetchProducts();
+  useEffect(() => {
+   
+    fetchItems();
   }, []);
   
   // for deleteing the TASK
