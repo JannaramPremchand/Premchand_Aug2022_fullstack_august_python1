@@ -23,6 +23,7 @@ const NavbarMenu = () => {
           <Nav className="mr-auto">
           <Link className="nav-problems" to="/">Problems</Link>
           <Link className="nav-problems" to="/addproblems">Add Problems</Link>
+          <Link className="nav-problems" to="/adminpanel">Admin</Link>
          
           </Nav>
         </Navbar.Collapse>
